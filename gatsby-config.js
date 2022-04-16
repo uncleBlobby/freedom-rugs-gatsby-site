@@ -1,7 +1,17 @@
 module.exports = {
   siteMetadata: {
-    title: `Freedom Rugs Gatsby Site`,
-    siteUrl: `https://www.yourdomain.tld`,
+    title: `Freedom Rugs`,
+    siteUrl: `http://www.freedomrugs.com`,
   },
-  plugins: [],
-}
+  plugins: [
+    "gatsby-plugin-image",
+    "gatsby-plugin-sharp",
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: `blog`,
+        path: `${__dirname}/blog`,
+      }
+    },
+  ],
+};
